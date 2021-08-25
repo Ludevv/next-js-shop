@@ -5,10 +5,8 @@ import styles from "../../../styles/Home.module.css";
 const Footer: React.FC = () => {
     return ( 
         <footer className={styles.footer}>
-            Powered by{" "}
-            <span className={styles.logo}>
-                <Image src="/vercel.svg" alt="Ludevv Logo" width={72} height={16} />
-            </span>
+            <span>Created by</span>
+                <Image src="/logoLudew.png" alt="Ludevv Logo" width={90} height={37} />
         </footer>
      );
 }
