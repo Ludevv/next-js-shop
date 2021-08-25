@@ -30,7 +30,7 @@ const WrapIcon = styled.div`
 export const StyledRiShoppingCartLine = styled(RiShoppingCartLine)`
     height: 30px;
     width: 30px;
-    color: #fff;
+    color: #2b2b2b;
 `;
 
 const Quantity = styled.div`
@@ -39,7 +39,7 @@ const Quantity = styled.div`
     right: -5px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 20px;
     height: 20px;
     color: #fff;

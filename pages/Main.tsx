@@ -3,7 +3,6 @@ import { useState } from 'react';
 import SearchBar from '../src/components/atoms/SearchBar';
 import { useStore } from '../src/store/store';
 import CartIcon from '../src/components/atoms/CartIcon';
-import Button from '../src/components/atoms/Button';
 import Card from '../src/components/organisms/Card';
 
 const Main = ({ products }) => {
@@ -29,14 +28,20 @@ const Main = ({ products }) => {
 
 
     return ( 
-        <main className="bg-gray-700 p-12 flex flex-wrap justify-center ">
-           	{/* <SearchBar 
+		<>
+           	<SearchBar 
 			   	searchProductName={searchProductName} 
 				handleSearchProducts={handleSearchProducts}
-			/> */}
-			{showProducts}
-			<CartIcon cartQuantity={cart.length} />
-      	</main>
+			/>
+        	<main className="bg-gray-700 p-12 flex flex-wrap justify-center text-gray-800 min-h-screen">
+				{showProducts.length > 0 
+				? 
+				showProducts 
+				:
+				<p className="text-white font-semibold text-2xl">I can't find this phrase ...</p>}
+				<CartIcon cartQuantity={cart.length}/>
+      		</main>
+		  </>
      );
 }
  

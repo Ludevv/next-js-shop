@@ -18,6 +18,7 @@ const SearchBar: React.FC<SearchBarProps> = ({searchProductName, handleSearchPro
             placeholder="Search product"
             onChange={handleSearchName}
             value={searchProductName}
+            className="w-11/12	outline-none		p-2 m-2"
         />
      );
 }

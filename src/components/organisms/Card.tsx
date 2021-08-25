@@ -17,7 +17,7 @@ type CardProps = {
  
 const Card: React.FC<CardProps> = ({ product, handleAddToCart }) => {
     return ( 
-        <div className="rounded-xl shadow-xl w-60 m-10 bg-white ">
+        <div className="rounded-xl shadow-xl w-60 md:m-10 bg-white m-1 mb-8">
             <div className="flex flex-col">
                 <Image 
                     src={product.image} 
@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({ product, handleAddToCart }) => {
                     <h3 className="font-semibold mb-6 text-center">{product.name}</h3>
                     <p className="mb-2 text-sm text-justify h-24">{product.description}</p>
 
-                    <div className="w-full text-right mb-6 text-sm underline">
+                    <div className="w-full text-right my-6 md:mb-6 text-sm underline">
                         <Link href={'/products/' + product.slug}>Check more details</Link>
                     </div>
 
