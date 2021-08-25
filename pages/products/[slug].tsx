@@ -36,6 +36,7 @@ export const getStaticProps = async (context) => {
         query: gql`
             query Products($slug: String) {
                 products(slug: $slug) {
+                    id
                     name
                     image
                     price
@@ -88,7 +89,7 @@ const Details = ( product ) => {
                     name={name} 
                     price={price} 
                     image={image} 
-                    handleAddToCart={handleAddToCart}
+                    handleAddToCart={() => handleAddToCart(id, name, price, image)}
                 />
                 <CartIcon cartQuantity={cart.length}/>
             </div>
