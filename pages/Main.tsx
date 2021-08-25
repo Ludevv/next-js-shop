@@ -42,7 +42,7 @@ const Main = ({ products }) => {
 				? 
 				showProducts 
 				:
-				<p className="text-white font-semibold text-2xl">I can't find this phrase ...</p>}
+				<p className="text-white font-semibold text-2xl">I cant find this phrase ...</p>}
 				<CartIcon cartQuantity={cart.length}/>
       		</main>
 		  </>
