@@ -9,7 +9,7 @@ const Cart = () => {
     const items = cart.map((item, index) => <ProductInCart key={index} item={item}/>)
     
     return ( 
-        <div className="bg-gray-700 p-12 min-h-screen text-white ">
+        <div className="bg-gray-700 p-2 sm:p-12 min-h-screen text-white ">
             <BackArrow/>
             <h2 className="text-6xl mb-16 font-extrabold text-center">Shop Cart</h2>
             {items.length > 0 ? items : <p className="text-center">Your cart is empty!</p>}
