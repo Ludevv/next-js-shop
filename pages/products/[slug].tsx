@@ -40,8 +40,8 @@ export const getStaticProps = async (context) => {
                     }
                 }
             }
-            `, 
-      variables: { slug: slug },
+        `, 
+        variables: { slug: slug },
    });
 
    return {
@@ -58,12 +58,12 @@ const Details = ( product ) => {
 
     return ( 
         <div>
+            <Link href="/">Go back</Link>
             <h1> {name} </h1>
             <Image src={image} alt={name} width={200} height={200}/>
             <p> {description} </p>
             <p> {price} </p>
             {categories.map((category, index) => <p key={index}>{category.name}</p>)}
-            <Link href="/">Powrót</Link>
         </div>
      );
 }

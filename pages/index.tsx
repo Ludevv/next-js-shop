@@ -15,7 +15,6 @@ import client from "../src/apollo/apollo-client";
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Main products={products}/>
-			<Footer/>
 		</div>
     );
 }
