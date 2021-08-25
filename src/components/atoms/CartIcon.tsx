@@ -15,7 +15,7 @@ const CartBadge = styled.div`
     bottom: 50px;
     width: 50px;
     height: 50px;
-    background-color: #4169e1;
+    background-color: #6ee7b7;
     border-radius: 50%;
     cursor: pointer;
 `;
@@ -27,7 +27,7 @@ const WrapIcon = styled.div`
     transform: translate(-50%, -50%);
 `;
 
-const StyledRiShoppingCartLine = styled(RiShoppingCartLine)`
+export const StyledRiShoppingCartLine = styled(RiShoppingCartLine)`
     height: 30px;
     width: 30px;
     color: #fff;

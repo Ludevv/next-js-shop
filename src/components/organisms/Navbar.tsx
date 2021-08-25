@@ -6,8 +6,8 @@ type NavbarProps = {
  
 const Navbar: React.FC<NavbarProps> = () => {
     return ( 
-        <div>
-            <h1>LOGO</h1>
+        <div className="bg-green-300 text-3xl p-4 font-bold">
+            <h1>ReasonApps Shop</h1>
             
         </div>
      );

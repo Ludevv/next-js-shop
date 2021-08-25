@@ -1,14 +1,12 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Main from "./Main";
-import Footer from "../src/components/organisms/Footer";
 import { gql } from "@apollo/client";
 import client from "../src/apollo/apollo-client";
 
 
  const Home = ({products}) => {
     return (
-		<div className={styles.container}>
+		<div>
 			<Head>
 				<title>ReasonApps Shop</title>
 				<meta name="ReasonApps Shop" content="Created by Piotr Ludew" />

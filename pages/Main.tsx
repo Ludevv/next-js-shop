@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { useState } from 'react';
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Link from 'next/link'
 import SearchBar from '../src/components/atoms/SearchBar';
 import { useStore } from '../src/store/store';
 import CartIcon from '../src/components/atoms/CartIcon';
+import Button from '../src/components/atoms/Button';
+import Card from '../src/components/organisms/Card';
 
 const Main = ({ products }) => {
 	const { cart, addToCart } = useStore();
@@ -25,29 +24,19 @@ const Main = ({ products }) => {
 		addToCart(item)
 	}
 
-
-	const fiteredProducts = products.filter(product => product.name.toLowerCase().includes(searchProductName));
-
-	const showProducts = fiteredProducts.map(product => 
-		<div key={product.id}>
-			<p>{product.name}</p>
-			<Image src={product.image} alt={product.name} width={150} height={150} />
-			<p>{product.price}</p>
-			<Link href={'/products/' + product.slug}>See more</Link>
-			<button onClick={() => handleAddToCart(product.id, product.name, product.price, product.image)}>Add to cart</button>
-		</div>
-	)
+	const showProducts = products.filter(product => product.name.toLowerCase().includes(searchProductName))
+		.map((product, index) => <Card key={index} product={product} handleAddToCart={handleAddToCart}/>)
 
 
     return ( 
-        <main className={styles.main}>
-           	<SearchBar 
+        <main className="bg-gray-700 p-12 flex flex-wrap justify-center ">
+           	{/* <SearchBar 
 			   	searchProductName={searchProductName} 
 				handleSearchProducts={handleSearchProducts}
-			/>
+			/> */}
 			{showProducts}
 			<CartIcon cartQuantity={cart.length} />
-      </main>
+      	</main>
      );
 }
  

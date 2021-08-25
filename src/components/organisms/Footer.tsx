@@ -1,12 +1,10 @@
 import * as React from 'react';
-import Image from "next/image";
-import styles from "../../../styles/Home.module.css";
+
 
 const Footer: React.FC = () => {
     return ( 
-        <footer className={styles.footer}>
-            <span>Created by</span>
-                <Image src="/logoLudew.png" alt="Ludevv Logo" width={90} height={37} />
+        <footer className="bg-green-300 text-center w-full font-medium p-2">
+            <span>© 2021 Created by Piotr Ludew</span>
         </footer>
      );
 }
