@@ -64,13 +64,17 @@ const Details = ( product ) => {
     const { cart, addToCart } = useStore();
 
     const handleAddToCart = (id: string, name: string, price: string, image: string) => {
-		const item = {
-			id,
-			name,
-			price,
-			image,
-		}
-		addToCart(item)
+		if(cart.find(item => item.id === id)) {
+			return;
+		} else {
+            const item = {
+                id,
+                name,
+                price,
+                image,
+            }
+		    addToCart(item)
+        }
 	}
 
     return ( 

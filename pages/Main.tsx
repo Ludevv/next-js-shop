@@ -14,6 +14,9 @@ const Main = ({ products }) => {
 	}
 
 	const handleAddToCart = (id: string, name: string, price: string, image: string) => {
+		if(cart.find(item => item.id === id)) {
+			return;
+		} else {
 		const item = {
 			id,
 			name,
@@ -21,6 +24,7 @@ const Main = ({ products }) => {
 			image,
 		}
 		addToCart(item)
+		}
 	}
 
 	const showProducts = products.filter(product => product.name.toLowerCase().includes(searchProductName))

@@ -29,7 +29,7 @@ const Card: React.FC<CardProps> = ({ product, handleAddToCart }) => {
 
                 <div key={product.id} className="p-4">
 
-                    <h3 className="font-semibold mb-6 text-center">{product.name}</h3>
+                    <h3 className="font-semibold mb-6 text-center h-10">{product.name}</h3>
                     <p className="mb-2 text-sm text-justify h-24">{product.description}</p>
 
                     <div className="w-full text-right my-6 md:mb-6 text-sm underline">

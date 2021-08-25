@@ -11,6 +11,7 @@ type ButtonProps = {
 
  
 const Button: React.FC<ButtonProps> = ({id, name, price, image, handleAddToCart}) => {
+
     return ( 
         <button 
             onClick={() => handleAddToCart(id, name, price, image)} 
