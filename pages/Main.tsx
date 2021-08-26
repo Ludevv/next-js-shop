@@ -27,7 +27,7 @@ const Main = ({ products }) => {
 		}
 	}
 
-	const showProducts = products.filter(product => product.name.toLowerCase().includes(searchProductName))
+	const showProducts = products.filter(product => typeof(product) !== undefined && product.name.toLowerCase().includes(searchProductName))
 		.map((product, index) => <Card key={index} product={product} handleAddToCart={handleAddToCart}/>)
 
 
