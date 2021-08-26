@@ -5,7 +5,7 @@ import { useStore } from '../src/store/store';
 import CartIcon from '../src/components/atoms/CartIcon';
 import Card from '../src/components/organisms/Card';
 
-const Main = ({ products }) => {
+const Main = ({ products = [] }) => {
 	const { cart, addToCart } = useStore();
 	const [searchProductName, setSearchProductName] = useState("");
 
