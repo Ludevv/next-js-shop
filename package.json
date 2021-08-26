@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.4.8",
+    "@netlify/plugin-nextjs": "^3.8.0",
     "@types/react": "^17.0.19",
     "graphql": "^15.5.1",
     "next": "11.1.0",
